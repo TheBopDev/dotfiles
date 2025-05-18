@@ -78,7 +78,6 @@ set cmdheight=2
 	set runtimepath=~/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,~/.vim/after
 
 
-	" ,a adds a filename to the buffer, and ,b hops to the file
   nnoremap <leader>a :argadd <c-r>=fnameescape(expand('%:p:h'))<cr>/*<C-d>
   nnoremap <leader>b :b <C-d>
 
@@ -122,7 +121,7 @@ set cmdheight=2
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " { Coding aids
   syntax on " Syntax highlighting
-  set filetype " Different syntax for different languages
+  " set filetype " Different syntax for different languages
   set matchpairs=(:),{:},[:]
   set undolevels=5000 " 'u' to undo, '<Ctrl>r' to redo
 " Helping with blocks
@@ -177,6 +176,7 @@ set cmdheight=2
 autocmd BuFnewFile *.c				0r ~/.vim/templates/skeleton.c
 autocmd BuFnewFile *.h				0r ~/.vim/templates/skeleton.h
 autocmd BuFnewFile *.vhdl			0r ~/.vim/templates/skeleton.vhdl
+autocmd BuFnewFile *_gitmd.md 0r ~/.vim/templates/skeleton_gitmd.md
 
 
 
